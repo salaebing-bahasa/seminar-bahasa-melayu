@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Seminar · Seminar Bahasa Melayu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/gaya.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%233A1D4F'/%3E%3Cpath d='M8 30 L14 12 L20 30 L26 12 L32 30' fill='none' stroke='%23C59A2A' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body>
+<div id="kepala"></div>
+
+<main id="isi">
+  <h1 style="font-size:2.2rem;margin-bottom:.8rem"><span class="ms">Kit Seminar</span><span class="th">ชุดเครื่องมือจัดสัมมนา: บทบาท กำหนดการ สคริปต์ และตัวจับเวลา</span></h1>
+  <p class="ms">Gunakan kit ini semasa merancang Mini Seminar (Minggu 9–11) dan Academic Showcase (Minggu 15).</p>
+  <p class="th">ใช้ชุดนี้ระหว่างวางแผนสัมมนาในชั้นเรียน (สัปดาห์ 9–11) และ Academic Showcase (สัปดาห์ 15) รายละเอียดเต็มอยู่ในเอกสารบทที่ 8, 9 และ 15</p>
+
+  <div class="tab-senarai" role="tablist" aria-label="Bahagian kit">
+    <button role="tab" id="tab-peranan" aria-controls="p-peranan" aria-selected="true">Peranan<small>บทบาททีมงาน</small></button>
+    <button role="tab" id="tab-atur" aria-controls="p-atur" aria-selected="false" tabindex="-1">Atur cara<small>กำหนดการ</small></button>
+    <button role="tab" id="tab-skrip" aria-controls="p-skrip" aria-selected="false" tabindex="-1">Skrip<small>สคริปต์</small></button>
+    <button role="tab" id="tab-soal" aria-controls="p-soal" aria-selected="false" tabindex="-1">Soal jawab<small>ถาม-ตอบและข้อมูลป้อนกลับ</small></button>
+    <button role="tab" id="tab-kontingensi" aria-controls="p-kontingensi" aria-selected="false" tabindex="-1">Kontingensi<small>แผนสำรอง</small></button>
+    <button role="tab" id="tab-pemasa" aria-controls="p-pemasa" aria-selected="false" tabindex="-1">Pemasa<small>ตัวจับเวลา</small></button>
+  </div>
+
+  <!-- PERANAN -->
+  <section class="tab-panel" role="tabpanel" id="p-peranan" aria-labelledby="tab-peranan">
+    <h2><span class="ms">Peranan dalam majlis seminar</span><span class="th">บทบาทในงานสัมมนา</span></h2>
+    <div class="jadual-bungkus">
+      <table>
+        <thead><tr><th><span class="ms">Peranan</span><span class="th">บทบาท</span></th><th><span class="ms">Tugas semasa majlis</span><span class="th">หน้าที่ระหว่างงาน</span></th><th><span class="ms">Ungkapan contoh</span><span class="th">สำนวนตัวอย่าง</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ms"><b>Pengacara majlis</b></span><span class="th">พิธีกร</span></td><td><span class="ms">Mengendalikan keseluruhan majlis: pembukaan, atur cara, jemputan ucapan dan penutup</span><span class="th">ดำเนินรายการทั้งงาน เปิด กำหนดการ เชิญกล่าว และปิด</span></td><td><span class="ms"><i>Majlis dimulakan dengan …</i></span></td></tr>
+          <tr><td><span class="ms"><b>Pengerusi sesi</b></span><span class="th">ประธานช่วง</span></td><td><span class="ms">Memperkenalkan pemakalah, mengawal masa dan mengendalikan soal jawab dalam satu sesi</span><span class="th">แนะนำผู้นำเสนอ คุมเวลา และควบคุมถาม-ตอบในช่วงของตน</span></td><td><span class="ms"><i>Saya mempersilakan pemakalah pertama …</i></span></td></tr>
+          <tr><td><span class="ms"><b>Pemakalah</b></span><span class="th">ผู้นำเสนอบทความ</span></td><td><span class="ms">Membentangkan kertas kerja dan menjawab soalan</span><span class="th">นำเสนอบทความและตอบคำถาม</span></td><td><span class="ms"><i>Terima kasih, Tuan Pengerusi …</i></span></td></tr>
+          <tr><td><span class="ms"><b>Pengulas</b></span><span class="th">ผู้วิพากษ์</span></td><td><span class="ms">Membaca kertas kerja lebih awal dan memberikan ulasan kritis yang membina (3–5 minit)</span><span class="th">อ่านบทความล่วงหน้าและวิพากษ์เชิงสร้างสรรค์ 3–5 นาที</span></td><td><span class="ms"><i>Kertas kerja ini menarik kerana …</i></span></td></tr>
+          <tr><td><span class="ms"><b>Pencatat</b></span><span class="th">ผู้บันทึก/ผู้สรุป</span></td><td><span class="ms">Mencatat isi utama, soalan dan jawapan; menyediakan rumusan sesi</span><span class="th">จดประเด็นหลัก คำถามและคำตอบ จัดทำสรุปของช่วง</span></td><td><span class="ms"><i>Secara ringkasnya, sesi ini …</i></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="nota">
+      <p class="ms">Pengacara majlis mengendalikan majlis dari awal hingga akhir. Pengerusi sesi hanya mengendalikan satu sesi, dan menyerahkan majlis semula kepada pengacara pada akhir sesi.</p>
+      <p class="th">พิธีกรดูแลงานตั้งแต่ต้นจนจบ ประธานช่วงดูแลเฉพาะช่วงของตน แล้วส่งคืนให้พิธีกรเมื่อจบช่วง</p>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Jawatankuasa pelaksana</span><span class="th">คณะทำงานสำหรับสัมมนาในชั้นเรียน (หนึ่งคนรับได้มากกว่าหนึ่งงาน)</span></h2>
+    <div class="grid-3">
+      <div class="panel"><h3><span class="ms">Pengarah program</span><span class="th">ผู้อำนวยการโครงการ</span></h3><p class="th" style="margin:0">ประสานทุกฝ่ายและตัดสินใจในวันงาน</p></div>
+      <div class="panel"><h3><span class="ms">Setiausaha</span><span class="th">เลขานุการ</span></h3><p class="th" style="margin:0">ข้อเสนอโครงการ บันทึกการประชุม หนังสือเชิญ รายงานหลังโครงการ</p></div>
+      <div class="panel"><h3><span class="ms">Urus setia dan teknikal</span><span class="th">ฝ่ายเลขาและเทคนิค</span></h3><p class="th" style="margin:0">รวบรวมสไลด์ในโฟลเดอร์เดียว ทดสอบโปรเจกเตอร์ ไมโครโฟน อินเทอร์เน็ต</p></div>
+      <div class="panel"><h3><span class="ms">Pendaftaran dan protokol</span><span class="th">ลงทะเบียนและพิธีการ</span></h3><p class="th" style="margin:0">รายชื่อผู้เข้าร่วม ต้อนรับแขก ป้ายชื่อ ผังที่นั่ง</p></div>
+      <div class="panel"><h3><span class="ms">Publisiti dan dokumentasi</span><span class="th">ประชาสัมพันธ์และบันทึกภาพ</span></h3><p class="th" style="margin:0">โปสเตอร์ ภาพถ่าย วิดีโอ (เมื่อได้รับอนุญาต)</p></div>
+      <div class="panel"><h3><span class="ms">Penilaian</span><span class="th">ฝ่ายประเมินผล</span></h3><p class="th" style="margin:0">แจกและเก็บแบบประเมินจากผู้เข้าร่วม</p></div>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Pembahagian peranan Minggu 10–11</span><span class="th">การแบ่งบทบาทสัปดาห์ที่ 10–11</span></h2>
+    <div class="grid-2">
+      <div class="panel"><h3><span class="ms">Minggu 10</span><span class="th">สัปดาห์ที่ 10</span></h3><p class="ms" style="margin:0">Kumpulan A membentang · Kumpulan B jawatankuasa</p><p class="th" style="margin:0">กลุ่ม A นำเสนอ · กลุ่ม B เป็นคณะทำงาน</p></div>
+      <div class="panel"><h3><span class="ms">Minggu 11</span><span class="th">สัปดาห์ที่ 11</span></h3><p class="ms" style="margin:0">Kumpulan B membentang · Kumpulan A jawatankuasa</p><p class="th" style="margin:0">กลุ่ม B นำเสนอ · กลุ่ม A เป็นคณะทำงาน</p></div>
+    </div>
+    <ul class="senarai" style="margin-top:1rem">
+      <li><span class="ms">Setiap pelajar sekurang-kurangnya sekali menjadi pemakalah dan sekali memegang peranan utama.</span><span class="th">ทุกคนเป็นผู้นำเสนออย่างน้อย 1 ครั้ง และรับบทบาทหลัก (พิธีกร ประธาน ผู้วิพากษ์ หรือผู้บันทึก) อย่างน้อย 1 ครั้ง</span></li>
+      <li><span class="ms">Slaid akhir dihantar kepada urus setia teknikal sekurang-kurangnya dua hari sebelum seminar.</span><span class="th">ส่งสไลด์ฉบับสุดท้ายให้ฝ่ายเทคนิคอย่างน้อย 2 วันก่อนสัมมนา</span></li>
+      <li><span class="ms">Pengulas menerima laporan pemakalah sekurang-kurangnya tiga hari lebih awal.</span><span class="th">ผู้วิพากษ์ได้รับรายงานของผู้นำเสนอล่วงหน้าอย่างน้อย 3 วัน</span></li>
+    </ul>
+  </section>
+
+  <!-- ATUR CARA -->
+  <section class="tab-panel" role="tabpanel" id="p-atur" aria-labelledby="tab-atur" hidden>
+    <h2><span class="ms">Contoh atur cara Mini Seminar</span><span class="th">ตัวอย่างกำหนดการสัมมนาในชั้นเรียน (3 ชั่วโมง ผู้นำเสนอ 6 คน)</span></h2>
+    <div class="jadual-bungkus">
+      <table>
+        <thead><tr><th><span class="ms">Masa</span><span class="th">เวลา</span></th><th><span class="ms">Acara</span><span class="th">กิจกรรม</span></th><th><span class="ms">Petugas</span><span class="th">ผู้รับผิดชอบ</span></th></tr></thead>
+        <tbody>
+          <tr><td class="angka">09.00–09.10</td><td><span class="ms">Pendaftaran dan ujian teknikal</span><span class="th">ลงทะเบียนและทดสอบเทคนิค</span></td><td><span class="ms">Pendaftaran, teknikal</span></td></tr>
+          <tr><td class="angka">09.10–09.20</td><td><span class="ms">Pembukaan majlis, ucapan aluan pengarah program, ucapan perasmian pensyarah</span><span class="th">เปิดงาน กล่าวต้อนรับ และกล่าวเปิด</span></td><td><span class="ms">Pengacara majlis</span></td></tr>
+          <tr><td class="angka">09.20–10.35</td><td><span class="ms">Sesi 1: tiga pembentangan (15 minit setiap satu) dan ulasan pengulas</span><span class="th">ช่วงที่ 1: นำเสนอ 3 เรื่อง เรื่องละ 15 นาที และผู้วิพากษ์</span></td><td><span class="ms">Pengerusi sesi 1</span></td></tr>
+          <tr><td class="angka">10.35–10.45</td><td><span class="ms">Rehat</span><span class="th">พัก</span></td><td>—</td></tr>
+          <tr><td class="angka">10.45–12.00</td><td><span class="ms">Sesi 2: tiga pembentangan dan ulasan pengulas</span><span class="th">ช่วงที่ 2: นำเสนอ 3 เรื่อง และผู้วิพากษ์</span></td><td><span class="ms">Pengerusi sesi 2</span></td></tr>
+          <tr><td class="angka">12.00–12.10</td><td><span class="ms">Rumusan pencatat, sijil, foto bersama, penutup</span><span class="th">สรุปโดยผู้บันทึก มอบเกียรติบัตร ถ่ายภาพ ปิดงาน</span></td><td><span class="ms">Pencatat, pengacara</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="th" style="margin-top:.6rem">ปรับเวลาตามคาบเรียนจริงของกลุ่ม (จันทร์เช้า จันทร์บ่าย หรือศุกร์เช้า)</p>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Kertas cadangan program</span><span class="th">ส่วนประกอบของข้อเสนอโครงการ (ส่งปลายสัปดาห์ที่ 9)</span></h2>
+    <ol class="senarai">
+      <li><span class="ms">Nama program</span><span class="th">ชื่อโครงการ</span></li>
+      <li><span class="ms">Latar belakang (2–3 ayat)</span><span class="th">หลักการและเหตุผล</span></li>
+      <li><span class="ms">Objektif (2–3 objektif yang boleh diukur)</span><span class="th">วัตถุประสงค์ที่วัดได้</span></li>
+      <li><span class="ms">Tarikh, masa dan tempat</span><span class="th">วัน เวลา สถานที่</span></li>
+      <li><span class="ms">Sasaran peserta</span><span class="th">กลุ่มเป้าหมาย</span></li>
+      <li><span class="ms">Atur cara minit demi minit</span><span class="th">กำหนดการรายนาที</span></li>
+      <li><span class="ms">Jawatankuasa: nama dan tugas setiap ahli</span><span class="th">คณะทำงาน ชื่อและหน้าที่</span></li>
+      <li><span class="ms">Anggaran perbelanjaan (jika ada)</span><span class="th">ประมาณการค่าใช้จ่าย (ถ้ามี)</span></li>
+      <li><span class="ms">Penutup: harapan, penyedia dan pelulus</span><span class="th">ส่วนท้าย ผู้จัดทำ และผู้อนุมัติ</span></li>
+    </ol>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Tiga fasa pengurusan seminar</span><span class="th">สามระยะของการจัดสัมมนา</span></h2>
+    <div class="grid-3">
+      <div class="panel"><h3><span class="ms">Sebelum</span><span class="th">ก่อนงาน</span></h3><p class="th" style="margin:0">ตั้งคณะทำงาน เขียนข้อเสนอ กำหนดวันและกำหนดการ รวบรวมสไลด์ เตรียมสคริปต์ ส่งคำเชิญ ทดสอบอุปกรณ์</p></div>
+      <div class="panel"><h3><span class="ms">Semasa</span><span class="th">ระหว่างงาน</span></h3><p class="th" style="margin:0">ลงทะเบียน ดำเนินรายการ ควบคุมช่วงนำเสนอ ถาม-ตอบ คุมเวลา บันทึกภาพและบันทึกการประชุม</p></div>
+      <div class="panel"><h3><span class="ms">Selepas</span><span class="th">หลังงาน</span></h3><p class="th" style="margin:0">เก็บสถานที่ ส่งคำขอบคุณ รวบรวมแบบประเมิน เขียนรายงานหลังโครงการ ประชุมสะท้อนคิด</p></div>
+    </div>
+  </section>
+
+  <!-- SKRIP -->
+  <section class="tab-panel" role="tabpanel" id="p-skrip" aria-labelledby="tab-skrip" hidden>
+    <h2><span class="ms">Skrip pengacara majlis</span><span class="th">สคริปต์พิธีกร (ปรับคำทักทายและสำนวนทางศาสนาได้ตามผู้เข้าร่วม)</span></h2>
+
+    <div class="skrip">
+      <div class="skrip-tajuk"><h3><span class="ms">Pembukaan majlis</span><span class="th">การเปิดงาน</span></h3><button class="salin" type="button" data-salin="s-buka">Salin · คัดลอก</button></div>
+      <blockquote id="s-buka">Bismillahirrahmanirrahim. Assalamualaikum warahmatullahi wabarakatuh dan salam sejahtera.
+Yang dihormati Ketua Program Bahasa Melayu, para pensyarah, tetamu jemputan dan rakan-rakan mahasiswa sekalian.
+Selamat datang ke Mini Seminar Bahasa, Sastera dan Budaya Melayu. Saya, …, selaku pengacara majlis pada pagi ini. Untuk makluman hadirin, majlis kita pada pagi ini akan dimulakan dengan ucapan aluan, diikuti dengan dua sesi pembentangan dan diakhiri dengan rumusan.
+Sebagai acara pertama, dengan segala hormatnya saya mempersilakan pengarah program, saudara …, untuk menyampaikan ucapan aluan.</blockquote>
+      <p class="th" style="margin:.6rem 0 0">ลำดับ: ทักทาย → เรียกขานตามลำดับอาวุโส → ต้อนรับและแนะนำตัว → แจ้งกำหนดการ → เชิญผู้กล่าวคนแรก</p>
+    </div>
+
+    <div class="skrip">
+      <div class="skrip-tajuk"><h3><span class="ms">Menyerahkan majlis kepada pengerusi</span><span class="th">ส่งต่อให้ประธานช่วง</span></h3><button class="salin" type="button" data-salin="s-serah">Salin · คัดลอก</button></div>
+      <blockquote id="s-serah">Terima kasih. Kita kini memasuki Sesi 1. Saya menyerahkan majlis kepada pengerusi sesi, saudari …, untuk mengendalikan sesi pembentangan. Dipersilakan.</blockquote>
+    </div>
+
+    <div class="skrip">
+      <div class="skrip-tajuk"><h3><span class="ms">Penutup majlis</span><span class="th">การปิดงาน</span></h3><button class="salin" type="button" data-salin="s-tutup">Salin · คัดลอก</button></div>
+      <blockquote id="s-tutup">Hadirin yang dihormati, dengan itu berakhirlah Mini Seminar kita pada pagi ini. Bagi pihak jawatankuasa, saya mengucapkan terima kasih kepada para pensyarah, pemakalah, pengulas dan semua hadirin. Sebarang kekurangan dalam majlis ini, kami memohon maaf.
+Sekian, wabillahitaufik walhidayah, wassalamualaikum warahmatullahi wabarakatuh dan salam sejahtera.</blockquote>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Skrip pengerusi sesi</span><span class="th">สคริปต์ประธานช่วง ทีละขั้น</span></h2>
+    <div class="jadual-bungkus">
+      <table>
+        <thead><tr><th><span class="ms">Langkah</span><span class="th">ขั้นตอน</span></th><th><span class="ms">Ungkapan</span><span class="th">สำนวน</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ms">Membuka sesi</span><span class="th">เปิดช่วง</span></td><td><span class="ms">Terima kasih, saudara pengacara. Selamat pagi dan selamat datang ke Sesi 1 yang bertemakan bahasa.</span></td></tr>
+          <tr><td><span class="ms">Peraturan</span><span class="th">กติกา</span></td><td><span class="ms">Setiap pemakalah diberikan 10 minit. Kad kuning menandakan baki dua minit. Soal jawab akan diadakan selepas setiap pembentangan.</span></td></tr>
+          <tr><td><span class="ms">Memperkenalkan pemakalah</span><span class="th">แนะนำผู้นำเสนอ</span></td><td><span class="ms">Pemakalah pertama ialah saudari …, pelajar tahun tiga, yang akan membentangkan kajian bertajuk "…". Dipersilakan.</span></td></tr>
+          <tr><td><span class="ms">Membuka soal jawab</span><span class="th">เปิดถาม-ตอบ</span></td><td><span class="ms">Terima kasih kepada pemakalah. Kini dibuka sesi soal jawab. Sila nyatakan nama sebelum bertanya dan kemukakan satu soalan sahaja.</span></td></tr>
+          <tr><td><span class="ms">Mengawal masa</span><span class="th">คุมเวลา</span></td><td><span class="ms">Memandangkan masa yang terhad, kita terima satu soalan terakhir.</span></td></tr>
+          <tr><td><span class="ms">Menutup sesi</span><span class="th">ปิดช่วง</span></td><td><span class="ms">Dengan itu, saya menutup Sesi 1 dan menyerahkan majlis semula kepada pengacara. Terima kasih.</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Struktur pembentangan pemakalah</span><span class="th">โครงสร้างการนำเสนอของผู้นำเสนอ</span></h2>
+    <div class="jadual-bungkus">
+      <table>
+        <thead><tr><th><span class="ms">Bahagian</span><span class="th">ส่วน</span></th><th><span class="ms">Ungkapan berguna</span><span class="th">สำนวนที่ใช้ได้</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ms">Salam dan sapaan</span><span class="th">ทักทาย</span></td><td><span class="ms">Terima kasih, Tuan Pengerusi. Yang dihormati para pensyarah dan rakan-rakan sekalian.</span></td></tr>
+          <tr><td><span class="ms">Diri dan tajuk</span><span class="th">แนะนำตัวและหัวข้อ</span></td><td><span class="ms">Nama saya … Pada hari ini saya akan membentangkan kajian bertajuk …</span></td></tr>
+          <tr><td><span class="ms">Peta jalan</span><span class="th">ลำดับการนำเสนอ</span></td><td><span class="ms">Pembentangan ini terbahagi kepada empat bahagian, iaitu …</span></td></tr>
+          <tr><td><span class="ms">Peralihan</span><span class="th">เชื่อมส่วน</span></td><td><span class="ms">Seterusnya, … / Sekarang saya beralih kepada …</span></td></tr>
+          <tr><td><span class="ms">Menerangkan data</span><span class="th">อธิบายข้อมูล</span></td><td><span class="ms">Rajah ini menunjukkan … / Seperti yang dapat dilihat, …</span></td></tr>
+          <tr><td><span class="ms">Rumusan</span><span class="th">สรุป</span></td><td><span class="ms">Sebagai rumusan, kajian ini mendapati …</span></td></tr>
+          <tr><td><span class="ms">Penutup</span><span class="th">ปิด</span></td><td><span class="ms">Sekian sahaja pembentangan saya. Terima kasih. Saya mempersilakan hadirin untuk bertanya.</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Pengulas dan pencatat</span><span class="th">ผู้วิพากษ์และผู้บันทึก</span></h2>
+    <div class="grid-2">
+      <div class="panel">
+        <h3><span class="ms">Susunan ulasan pengulas</span><span class="th">ลำดับการวิพากษ์</span></h3>
+        <ol class="senarai">
+          <li><span class="ms">Ringkaskan tujuan kertas kerja dalam satu ayat.</span><span class="th">สรุปจุดประสงค์ของบทความใน 1 ประโยค</span></li>
+          <li><span class="ms">Nyatakan dua kekuatan.</span><span class="th">ระบุจุดแข็ง 2 ข้อ</span></li>
+          <li><span class="ms">Kemukakan satu atau dua persoalan dengan santun.</span><span class="th">ตั้งข้อสงสัยหรือจุดอ่อน 1–2 ข้ออย่างสุภาพ</span></li>
+          <li><span class="ms">Berikan cadangan untuk kajian lanjutan.</span><span class="th">เสนอแนะการศึกษาต่อยอด</span></li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3><span class="ms">Isi catatan pencatat</span><span class="th">สิ่งที่ผู้บันทึกต้องจด</span></h3>
+        <ol class="senarai">
+          <li><span class="ms">Nama pemakalah dan tajuk</span><span class="th">ชื่อผู้นำเสนอและหัวข้อ</span></li>
+          <li><span class="ms">Tiga isi utama pembentangan</span><span class="th">ประเด็นหลัก 3 ข้อ</span></li>
+          <li><span class="ms">Soalan dan ringkasan jawapan</span><span class="th">คำถามและสรุปคำตอบ</span></li>
+          <li><span class="ms">Ulasan pengulas</span><span class="th">ความเห็นผู้วิพากษ์</span></li>
+          <li><span class="ms">Rumusan sesi (2–3 ayat) untuk dibacakan</span><span class="th">สรุปช่วง 2–3 ประโยค สำหรับอ่านตอนท้ายงาน</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOAL JAWAB -->
+  <section class="tab-panel" role="tabpanel" id="p-soal" aria-labelledby="tab-soal" hidden>
+    <h2><span class="ms">Langkah D-T-U-J</span><span class="th">ขั้นตอนตอบคำถาม ฟัง – ขอบคุณ – ทวน – ตอบ</span></h2>
+    <ol class="fasa-senarai">
+      <li class="fasa"><div class="fasa-minggu"><b>D</b><span>Dengar</span></div><div><span class="ms">Dengar soalan hingga selesai.</span><span class="th">ฟังคำถามให้จบ</span></div></li>
+      <li class="fasa"><div class="fasa-minggu"><b>T</b><span>Terima kasih</span></div><div><span class="ms">Ucapkan terima kasih kepada penyoal.</span><span class="th">ขอบคุณผู้ถาม</span></div></li>
+      <li class="fasa"><div class="fasa-minggu"><b>U</b><span>Ulang</span></div><div><span class="ms">Ulang atau parafrasa soalan untuk memastikan kefahaman.</span><span class="th">ทวนหรือถอดความคำถามเพื่อให้แน่ใจว่าเข้าใจถูก</span></div></li>
+      <li class="fasa"><div class="fasa-minggu"><b>J</b><span>Jawab</span></div><div><span class="ms">Jawab dengan ringkas dan tepat.</span><span class="th">ตอบให้กระชับและตรงประเด็น</span></div></li>
+    </ol>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Ungkapan untuk soal jawab</span><span class="th">สำนวนสำหรับช่วงถาม-ตอบ</span></h2>
+    <div class="jadual-bungkus">
+      <table>
+        <thead><tr><th><span class="ms">Situasi</span><span class="th">สถานการณ์</span></th><th><span class="ms">Ungkapan</span><span class="th">สำนวน</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ms">Menerima soalan</span><span class="th">รับคำถาม</span></td><td><span class="ms">Terima kasih atas soalan tersebut. Jika saya tidak silap, saudara bertanya tentang …</span></td></tr>
+          <tr><td><span class="ms">Soalan kurang jelas</span><span class="th">คำถามไม่ชัด</span></td><td><span class="ms">Mohon maaf, boleh saudari ulang atau jelaskan bahagian … ?</span></td></tr>
+          <tr><td><span class="ms">Tidak tahu jawapan</span><span class="th">ไม่ทราบคำตอบ</span></td><td><span class="ms">Itu soalan yang menarik. Setakat ini kajian saya belum meliputi aspek tersebut, tetapi saya akan menelitinya.</span></td></tr>
+          <tr><td><span class="ms">Di luar skop</span><span class="th">นอกขอบเขต</span></td><td><span class="ms">Soalan itu berada di luar skop kajian ini, yang hanya memberikan tumpuan kepada …</span></td></tr>
+          <tr><td><span class="ms">Pandangan berbeza</span><span class="th">ความเห็นต่าง</span></td><td><span class="ms">Terima kasih atas pandangan tersebut. Saya bersetuju sebahagiannya; namun, data saya menunjukkan …</span></td></tr>
+          <tr><td><span class="ms">Menutup jawapan</span><span class="th">ปิดคำตอบ</span></td><td><span class="ms">Saya harap jawapan ini menjawab soalan saudara.</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Laras formal</span><span class="th">หลีกเลี่ยงภาษาปากและภาษาถิ่นบนเวที</span></h2>
+    <div class="jadual-bungkus">
+      <table>
+        <thead><tr><th><span class="ms">Elakkan</span><span class="th">หลีกเลี่ยง</span></th><th><span class="ms">Gunakan</span><span class="th">ควรใช้</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ms">aku, kau, korang · kawe, ambo</span></td><td><span class="ms">saya; tuan, puan, saudara, saudari; hadirin sekalian</span></td></tr>
+          <tr><td><span class="ms">Okey, jadi, macam ni …</span></td><td><span class="ms">Baiklah, seterusnya saya akan menerangkan …</span></td></tr>
+          <tr><td><span class="ms">Saya tak pasti la …</span></td><td><span class="ms">Setakat ini saya belum mengkaji aspek tersebut, namun …</span></td></tr>
+          <tr><td><span class="ms">Soalan tu salah.</span></td><td><span class="ms">Terima kasih atas pandangan tersebut. Izinkan saya menjelaskan …</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Dua Bintang, Satu Hasrat</span><span class="th">ให้ข้อมูลป้อนกลับแก่เพื่อน: จุดแข็งเฉพาะ 2 ข้อ + ข้อเสนอปรับปรุง 1 ข้อ</span></h2>
+    <div class="grid-2">
+      <div class="panel"><h3><span class="ms">Umum (kurang membantu)</span><span class="th">แบบทั่วไป</span></h3><p class="ms" style="margin:0"><i>Pembentangan awak bagus.</i><br><i>Suara kurang.</i></p></div>
+      <div class="panel"><h3><span class="ms">Khusus (membantu)</span><span class="th">แบบเฉพาะเจาะจง</span></h3><p class="ms" style="margin:0"><i>Pembukaan saudara jelas kerana peta jalan disampaikan dalam satu ayat.</i><br><i>Suara menjadi perlahan semasa menerangkan Jadual 2; cuba hadap hadirin ketika itu.</i></p></div>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Menerangkan poster dalam 60 saat</span><span class="th">อธิบายโปสเตอร์แก่ผู้ชมใน 60 วินาที (Academic Showcase)</span></h2>
+    <div class="skrip">
+      <div class="skrip-tajuk"><h3><span class="ms">Skrip poster</span><span class="th">ทักทาย → ปัญหา → ผล → สาระ → เชิญถาม</span></h3><button class="salin" type="button" data-salin="s-poster">Salin · คัดลอก</button></div>
+      <blockquote id="s-poster">Selamat pagi. Boleh saya terangkan kajian ini secara ringkas?
+Kajian ini bermula daripada persoalan …
+Dapatan utama kami ditunjukkan dalam carta ini …
+Mesej utamanya ialah …
+Adakah tuan atau puan mempunyai sebarang soalan?</blockquote>
+    </div>
+  </section>
+
+  <!-- KONTINGENSI -->
+  <section class="tab-panel" role="tabpanel" id="p-kontingensi" aria-labelledby="tab-kontingensi" hidden>
+    <h2><span class="ms">Pelan kontingensi</span><span class="th">แผนสำรองเมื่อมีปัญหาในวันงาน</span></h2>
+    <div class="jadual-bungkus">
+      <table>
+        <thead><tr><th><span class="ms">Masalah</span><span class="th">ปัญหา</span></th><th><span class="ms">Tindakan</span><span class="th">การแก้ไข</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ms">Projektor atau komputer tidak berfungsi</span><span class="th">โปรเจกเตอร์หรือคอมพิวเตอร์ใช้ไม่ได้</span></td><td><span class="ms">Komputer riba sandaran; salinan slaid dalam USB dan dalam talian; bahan edaran bercetak</span><span class="th">โน้ตบุ๊กสำรอง สไลด์ใน USB และออนไลน์ เอกสารแจกพิมพ์</span></td></tr>
+          <tr><td><span class="ms">Pemakalah lewat atau tidak hadir</span><span class="th">ผู้นำเสนอมาสายหรือไม่มา</span></td><td><span class="ms">Tukar susunan pembentangan; pengerusi memaklumkan perubahan dengan tenang</span><span class="th">สลับลำดับ ประธานแจ้งอย่างใจเย็น</span></td></tr>
+          <tr><td><span class="ms">Masa terlebih</span><span class="th">เวลาเกิน</span></td><td><span class="ms">Pengerusi menggunakan kad merah; kurangkan soal jawab sesi berikutnya</span><span class="th">ประธานใช้บัตรแดง ลดเวลาถาม-ตอบช่วงถัดไป</span></td></tr>
+          <tr><td><span class="ms">Tiada soalan daripada hadirin</span><span class="th">ไม่มีผู้ถาม</span></td><td><span class="ms">Pengerusi menyediakan satu atau dua soalan simpanan bagi setiap pemakalah</span><span class="th">ประธานเตรียมคำถามสำรอง 1–2 ข้อต่อผู้นำเสนอ</span></td></tr>
+          <tr><td><span class="ms">Petugas sakit</span><span class="th">ผู้รับผิดชอบป่วย</span></td><td><span class="ms">Setiap peranan mempunyai seorang pengganti yang telah membaca skrip</span><span class="th">ทุกบทบาทมีผู้แทนที่อ่านสคริปต์ไว้แล้ว</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:2.5rem"><span class="ms">Senarai semak hari seminar</span><span class="th">รายการตรวจก่อนขึ้นเวที</span></h2>
+    <div class="grid-2">
+      <div class="panel">
+        <h3><span class="ms">Pemakalah</span><span class="th">ผู้นำเสนอ</span></h3>
+        <ul class="senarai">
+          <li><span class="ms">Slaid dihantar H-2</span><span class="th">ส่งสไลด์ล่วงหน้า 2 วัน</span></li>
+          <li><span class="ms">Pembukaan dan penutup dihafal</span><span class="th">จำบทเปิดและปิดได้</span></li>
+          <li><span class="ms">Berlatih dengan jam randik sekurang-kurangnya tiga kali</span><span class="th">ซ้อมจับเวลาอย่างน้อย 3 ครั้ง</span></li>
+          <li><span class="ms">Dua soalan jangkaan dan jawapannya</span><span class="th">เตรียมคำถามที่คาดว่าจะถูกถาม 2 ข้อ</span></li>
+          <li><span class="ms">Pakaian kemas mengikut peraturan</span><span class="th">แต่งกายเรียบร้อยตามระเบียบ</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3><span class="ms">Jawatankuasa</span><span class="th">คณะทำงาน</span></h3>
+        <ul class="senarai">
+          <li><span class="ms">Bilik dan peralatan disahkan</span><span class="th">ยืนยันห้องและอุปกรณ์</span></li>
+          <li><span class="ms">Semua slaid dalam satu folder</span><span class="th">สไลด์ทั้งหมดอยู่ในโฟลเดอร์เดียว</span></li>
+          <li><span class="ms">Kad kuning dan kad merah tersedia</span><span class="th">เตรียมบัตรเหลืองและบัตรแดง</span></li>
+          <li><span class="ms">Borang penilaian dan sijil</span><span class="th">แบบประเมินและเกียรติบัตร</span></li>
+          <li><span class="ms">Rakaman dan foto dengan izin</span><span class="th">บันทึกภาพเมื่อได้รับอนุญาต</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEMASA -->
+  <section class="tab-panel" role="tabpanel" id="p-pemasa" aria-labelledby="tab-pemasa" hidden>
+    <h2><span class="ms">Pemasa pembentangan</span><span class="th">ตัวจับเวลาสำหรับประธานช่วง ฉายบนจอหรือเปิดในโทรศัพท์</span></h2>
+    <div class="pemasa" id="pemasa" data-kad="tiada">
+      <div class="pemasa-status" id="pemasa-status" aria-live="polite">Sedia · พร้อม</div>
+      <div class="pemasa-angka" id="pemasa-angka" role="timer">10:00</div>
+      <div class="pemasa-kawal">
+        <label class="sr" for="pemasa-slot">Tempoh · ระยะเวลา</label>
+        <select id="pemasa-slot">
+          <option value="10">10 minit · Mini Seminar</option>
+          <option value="7">7 minit · Showcase</option>
+          <option value="5">5 minit · soal jawab</option>
+          <option value="1">1 minit · latihan pembukaan</option>
+        </select>
+        <button type="button" class="utama" id="pemasa-mula">Mula · เริ่ม</button>
+        <button type="button" id="pemasa-semula">Set semula · เริ่มใหม่</button>
+      </div>
+    </div>
+    <p class="th" style="margin-top:.8rem">พื้นหลังเปลี่ยนเป็น<b>สีเหลือง</b>เมื่อเหลือ 2 นาที (บัตรเหลือง) และ<b>สีแดง</b>เมื่อหมดเวลา (บัตรแดง) สำหรับช่วง 1 นาที บัตรเหลืองขึ้นที่ 15 วินาทีสุดท้าย</p>
+  </section>
+
+  <nav id="nav-halaman" class="nav-halaman" aria-label="Halaman seterusnya"></nav>
+</main>
+
+<div id="kaki"></div>
+
+<script src="js/data.js"></script>
+<script src="js/laman.js"></script>
+<script src="js/tab.js"></script>
+<script>
+(function () {
+  var kotak = document.getElementById("pemasa");
+  var angka = document.getElementById("pemasa-angka");
+  var status = document.getElementById("pemasa-status");
+  var slot = document.getElementById("pemasa-slot");
+  var mula = document.getElementById("pemasa-mula");
+  var jumlah = 600, baki = 600, jalan = false, sasaran = 0, t = null;
+
+  function amaran() { return jumlah <= 60 ? 15 : 120; }
+  function papar() {
+    var s = Math.max(0, Math.ceil(baki));
+    angka.textContent = Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+    var kad = baki <= 0 ? "merah" : (baki <= amaran() ? "kuning" : "tiada");
+    if (kotak.getAttribute("data-kad") !== kad) {
+      kotak.setAttribute("data-kad", kad);
+      status.textContent = kad === "merah" ? "Kad merah: masa tamat · หมดเวลา" :
+        kad === "kuning" ? "Kad kuning: baki " + (amaran() === 120 ? "dua minit · เหลือ 2 นาที" : "15 saat · เหลือ 15 วินาที") :
+        (jalan ? "Sedang berjalan · กำลังจับเวลา" : "Sedia · พร้อม");
+    }
+  }
+  function detik() { baki = (sasaran - Date.now()) / 1000; papar(); if (baki <= 0) henti(); }
+  function henti() { jalan = false; clearInterval(t); mula.textContent = "Mula · เริ่ม"; }
+  mula.addEventListener("click", function () {
+    if (jalan) { henti(); status.textContent = "Dijeda · หยุดชั่วคราว"; return; }
+    if (baki <= 0) baki = jumlah;
+    jalan = true; sasaran = Date.now() + baki * 1000;
+    mula.textContent = "Jeda · หยุด";
+    status.textContent = "Sedang berjalan · กำลังจับเวลา";
+    t = setInterval(detik, 250);
+  });
+  function setSemula() { henti(); jumlah = baki = Number(slot.value) * 60; kotak.setAttribute("data-kad", "tiada"); status.textContent = "Sedia · พร้อม"; papar(); }
+  document.getElementById("pemasa-semula").addEventListener("click", setSemula);
+  slot.addEventListener("change", setSemula);
+  setSemula();
+})();
+</script>
+</body>
+</html>

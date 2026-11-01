@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perjalanan 15 Minggu · Seminar Bahasa Melayu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/gaya.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%233A1D4F'/%3E%3Cpath d='M8 30 L14 12 L20 30 L26 12 L32 30' fill='none' stroke='%23C59A2A' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body>
+<div id="kepala"></div>
+
+<main id="isi">
+  <h1 style="font-size:2.2rem;margin-bottom:.8rem"><span class="ms">Perjalanan 15 Minggu</span><span class="th">เส้นทางโครงงานสัมมนา 15 สัปดาห์</span></h1>
+  <p class="ms">Setiap minggu ada tugasan amali. Tandakan tugasan yang sudah siap untuk menjejak kemajuan anda.</p>
+  <p class="th">ทุกสัปดาห์มีงานปฏิบัติ ติ๊กงานที่ทำเสร็จแล้วเพื่อติดตามความคืบหน้า (บันทึกไว้ในเบราว์เซอร์ของนิสิตเอง อาจารย์ไม่เห็นข้อมูลนี้)</p>
+
+  <div class="kemajuan" aria-live="polite">
+    <div class="kemajuan-atas">
+      <span><span class="ms" style="display:inline">Kemajuan saya</span> <span class="th" style="display:inline">· ความคืบหน้าของฉัน</span></span>
+      <span class="angka" id="kemajuan-teks">0 / 0</span>
+    </div>
+    <div class="kemajuan-bar"><span id="kemajuan-bar"></span></div>
+  </div>
+
+  <div class="tapis" role="group" aria-label="Tapis mengikut fasa · กรองตามช่วง" id="tapis"></div>
+
+  <div id="senarai-minggu"></div>
+
+  <p class="th" style="margin-top:1rem"><button class="salin" type="button" id="set-semula">Kosongkan semua tanda · ล้างการติ๊กทั้งหมด</button></p>
+
+  <nav id="nav-halaman" class="nav-halaman" aria-label="Halaman seterusnya"></nav>
+</main>
+
+<div id="kaki"></div>
+
+<script src="js/data.js"></script>
+<script src="js/laman.js"></script>
+<script>
+(function () {
+  var K = window.KURSUS;
+  var KUNCI = "sbm-0113382-tugasan";
+  var siap = simpan.baca(KUNCI, {});
+  var babById = {};
+  K.bab.forEach(function (b) { babById[b.no] = b; });
+
+  var panah = '<svg class="anak-panah" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+
+  /* Minggu semasa: buka minggu yang pertama belum siap */
+  function bilSiap(m) { return m.tugasan.filter(function (_, i) { return siap[m.no + "-" + i]; }).length; }
+  var pertamaBelum = K.minggu.find(function (m) { return bilSiap(m) < m.tugasan.length; });
+
+  document.getElementById("senarai-minggu").innerHTML = K.minggu.map(function (m) {
+    var b = babById[m.no];
+    var tags = '<span class="tag">' + m.clo + '</span><span class="tag">' + K.fasa[m.fasa].ms + "</span>";
+    if (m.markah) tags += '<span class="tag markah">' + m.markah + "</span>";
+    var tug = m.tugasan.map(function (t, i) {
+      var id = "t" + m.no + "-" + i;
+      return '<li><input type="checkbox" id="' + id + '" data-k="' + m.no + "-" + i + '"' + (siap[m.no + "-" + i] ? " checked" : "") + '>' +
+        '<label for="' + id + '"><span class="ms">' + t.ms + '</span><span class="th">' + t.th + "</span></label></li>";
+    }).join("");
+    var hasil = m.hasil ? '<div class="nota"><p class="ms"><b>Hasil:</b> ' + m.hasil.ms + '</p><p class="th">ผลงาน: ' + m.hasil.th + "</p></div>" : "";
+    var pautan = b ? '<p class="th" style="margin:0">เอกสารประกอบ: <a href="https://drive.google.com/file/d/' + b.id + '/view" target="_blank" rel="noopener">Bab ' + b.no + " · " + b.ms + "</a></p>" : "";
+    return '<details class="minggu" data-fasa="' + m.fasa + '" data-no="' + m.no + '"' + (pertamaBelum && pertamaBelum.no === m.no ? " open" : "") + ">" +
+      '<summary><span class="minggu-no">' + m.no + "<small>สัปดาห์</small></span>" +
+      '<span><span class="ms">' + m.ms + '</span><span class="th">' + m.th + "</span></span>" + panah + "</summary>" +
+      '<div class="minggu-isi"><div>' + tags + '</div><ul class="tugasan">' + tug + "</ul>" + hasil + pautan + "</div></details>";
+  }).join("");
+
+  /* Butang tapis */
+  var tapis = document.getElementById("tapis");
+  var pilihan = [{ k: "semua", ms: "Semua", th: "ทั้งหมด" }].concat(Object.keys(K.fasa).map(function (f) { return { k: f, ms: K.fasa[f].ms, th: K.fasa[f].th }; }));
+  tapis.innerHTML = pilihan.map(function (p, i) {
+    return '<button type="button" data-f="' + p.k + '" aria-pressed="' + (i === 0) + '" title="' + p.th + '">' + p.ms + "</button>";
+  }).join("");
+  tapis.addEventListener("click", function (e) {
+    var btn = e.target.closest("button"); if (!btn) return;
+    tapis.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === btn ? "true" : "false"); });
+    var f = btn.getAttribute("data-f");
+    document.querySelectorAll(".minggu").forEach(function (d) { d.hidden = !(f === "semua" || d.getAttribute("data-fasa") === f); });
+  });
+
+  function kemaskini() {
+    var jumlah = 0, buat = 0;
+    K.minggu.forEach(function (m) {
+      jumlah += m.tugasan.length;
+      var n = bilSiap(m); buat += n;
+      var d = document.querySelector('.minggu[data-no="' + m.no + '"]');
+      d.setAttribute("data-siap", n === m.tugasan.length ? "ya" : "tidak");
+    });
+    document.getElementById("kemajuan-teks").textContent = buat + " / " + jumlah;
+    document.getElementById("kemajuan-bar").style.width = (jumlah ? buat / jumlah * 100 : 0) + "%";
+  }
+
+  document.getElementById("senarai-minggu").addEventListener("change", function (e) {
+    var k = e.target.getAttribute("data-k"); if (!k) return;
+    if (e.target.checked) siap[k] = true; else delete siap[k];
+    simpan.tulis(KUNCI, siap);
+    kemaskini();
+  });
+  document.getElementById("set-semula").addEventListener("click", function () {
+    if (!confirm("Kosongkan semua tanda? · ล้างการติ๊กทั้งหมดหรือไม่")) return;
+    siap = {}; simpan.tulis(KUNCI, siap);
+    document.querySelectorAll(".tugasan input").forEach(function (i) { i.checked = false; });
+    kemaskini();
+    tunjukToast("Semua tanda dikosongkan · ล้างแล้ว");
+  });
+  kemaskini();
+})();
+</script>
+</body>
+</html>
