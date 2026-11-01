@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dokumen · Seminar Bahasa Melayu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/gaya.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%233A1D4F'/%3E%3Cpath d='M8 30 L14 12 L20 30 L26 12 L32 30' fill='none' stroke='%23C59A2A' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body>
+<div id="kepala"></div>
+
+<main id="isi">
+  <h1 style="font-size:2.2rem;margin-bottom:.8rem"><span class="ms">Dokumen Pengajaran</span><span class="th">เอกสารประกอบการสอน 15 บท</span></h1>
+  <p class="ms">Setiap bab mengandungi objektif, kandungan, kosa kata, lembaran kerja dan rubrik untuk minggu tersebut.</p>
+  <p class="th">แต่ละบทมีจุดประสงค์ เนื้อหา คำศัพท์ ใบงาน และเกณฑ์ประเมินของสัปดาห์นั้น ภาษามลายูอยู่บน ภาษาไทยอยู่ล่าง</p>
+
+  <ol class="bab-senarai" id="bab-senarai" style="margin-top:1.5rem"></ol>
+
+  <div class="nota" style="margin-top:2rem">
+    <p class="ms">Rujukan: Muhammad Salaebing &amp; Samsiyah Malaheng. (2569). <i>Dokumen pengajaran kursus 0113382 Seminar Bahasa Melayu</i>. Program Bahasa Melayu, Universiti Thaksin.</p>
+    <p class="th">มูหำหมัด สาแลบิง และ ซัมซียะห์ มะลาเฮง. (2569). เอกสารประกอบการสอนรายวิชา 0113382 สัมมนาภาษามลายู. สงขลา: สาขาวิชาภาษามลายู คณะมนุษยศาสตร์และสังคมศาสตร์ มหาวิทยาลัยทักษิณ.</p>
+  </div>
+
+  <nav id="nav-halaman" class="nav-halaman" aria-label="Halaman seterusnya"></nav>
+</main>
+
+<div id="kaki"></div>
+
+<script src="js/data.js"></script>
+<script src="js/laman.js"></script>
+<script>
+(function () {
+  document.getElementById("bab-senarai").innerHTML = window.KURSUS.bab.map(function (b) {
+    return '<li class="bab"><span class="bab-no" aria-label="Bab ' + b.no + '">' + b.no + "</span>" +
+      '<div><span class="ms">' + b.ms + '</span><span class="th">บทที่ ' + b.no + " · " + b.th + "</span></div>" +
+      '<div class="bab-pautan"><a href="https://drive.google.com/file/d/' + b.id + '/view" target="_blank" rel="noopener">Baca · เปิดอ่าน</a>' +
+      '<a href="https://drive.google.com/uc?export=download&id=' + b.id + '">Muat turun · ดาวน์โหลด</a></div></li>';
+  }).join("");
+})();
+</script>
+</body>
+</html>

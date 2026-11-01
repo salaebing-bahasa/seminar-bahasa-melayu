@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rubrik · Seminar Bahasa Melayu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/gaya.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%233A1D4F'/%3E%3Cpath d='M8 30 L14 12 L20 30 L26 12 L32 30' fill='none' stroke='%23C59A2A' stroke-width='3'/%3E%3C/svg%3E">
+</head>
+<body>
+<div id="kepala"></div>
+
+<main id="isi">
+  <h1 style="font-size:2.2rem;margin-bottom:.8rem"><span class="ms">Rubrik Penilaian</span><span class="th">เกณฑ์ประเมินทุกชิ้นงาน</span></h1>
+  <p class="ms">Pilih rubrik, kemudian klik satu tahap bagi setiap kriteria untuk menilai draf anda sendiri sebelum menghantar.</p>
+  <p class="th">เลือกเกณฑ์ แล้วคลิกระดับในแต่ละแถวเพื่อประเมินร่างงานของตนเองก่อนส่ง คะแนนนี้เป็นการประเมินตนเองเท่านั้น คะแนนจริงมาจากอาจารย์</p>
+
+  <div class="rubrik-pilih" id="rubrik-pilih" role="group" aria-label="Pilih rubrik · เลือกเกณฑ์"></div>
+
+  <section id="rubrik-papar" aria-live="polite"></section>
+
+  <div class="nota" style="margin-top:2rem">
+    <p class="ms">Jurnal reflektif (10 markah) dinilai dengan rubrik dalam Bab 12. Borang penilaian poster Showcase terdapat dalam Bab 15.</p>
+    <p class="th">บันทึกสะท้อนคิด (10 คะแนน) ดูเกณฑ์ในเอกสารบทที่ 12 แบบประเมินโปสเตอร์ใน Showcase ดูในบทที่ 15 <a href="dokumen.html">เปิดเอกสาร</a></p>
+  </div>
+
+  <nav id="nav-halaman" class="nav-halaman" aria-label="Halaman seterusnya"></nav>
+</main>
+
+<div id="kaki"></div>
+
+<script src="js/data.js"></script>
+<script src="js/laman.js"></script>
+<script src="js/rubrik-data.js"></script>
+<script>
+(function () {
+  var R = window.RUBRIK;
+  var KUNCI = "sbm-0113382-rubrik";
+  var skor = simpan.baca(KUNCI, {});
+  var pilih = document.getElementById("rubrik-pilih");
+  var papar = document.getElementById("rubrik-papar");
+
+  pilih.innerHTML = R.map(function (r, i) {
+    return '<button type="button" data-i="' + i + '" aria-pressed="false">' +
+      '<span class="pemberat">' + r.markah + " markah · " + r.wajaran + "</span>" +
+      '<span class="ms">' + r.ms + '</span><span class="th">' + r.th + " · สัปดาห์ " + r.minggu + "</span></button>";
+  }).join("");
+
+  function lukis(i) {
+    var r = R[i];
+    pilih.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-i") == i ? "true" : "false"); });
+    var s = skor[r.id] || {};
+    var kepala = '<thead><tr><th><span class="ms">Kriteria</span><span class="th">เกณฑ์</span></th>' +
+      [["Cemerlang", "ดีมาก"], ["Baik", "ดี"], ["Sederhana", "พอใช้"], ["Perlu dibaiki", "ปรับปรุง"]].map(function (h) {
+        return '<th><span class="ms">' + h[0] + '</span><span class="th">' + h[1] + "</span></th>";
+      }).join("") + "</tr></thead>";
+    var badan = r.kriteria.map(function (k, ki) {
+      return "<tr><td><span class=\"ms\"><b>" + k.ms + "</b> (" + k.maks + ')</span><span class="th">' + k.th + "</span></td>" +
+        k.tahap.map(function (t, ti) {
+          var dipilih = s[ki] === ti;
+          return '<td class="pilihan' + (dipilih ? " dipilih" : "") + '" tabindex="0" role="button" aria-pressed="' + dipilih + '" data-k="' + ki + '" data-t="' + ti + '">' +
+            '<span class="mata">' + t[0] + '</span><span class="ms">' + t[2] + '</span><span class="th">' + t[3] + "</span></td>";
+        }).join("") + "</tr>";
+    }).join("");
+    var nota = r.nota ? '<div class="nota"><p class="ms">' + r.nota.ms + '</p><p class="th">' + r.nota.th + "</p></div>" : "";
+    papar.innerHTML = '<h2><span class="ms">' + r.ms + " (" + r.markah + ' markah)</span><span class="th">' + r.th + " · " + r.wajaran + " · เอกสารบทที่ " + r.bab + "</span></h2>" + nota +
+      '<div class="jadual-bungkus rubrik"><table>' + kepala + "<tbody>" + badan + "</tbody></table></div>" +
+      '<div class="jumlah-kendiri"><div><span class="ms">Anggaran markah kendiri</span><span class="th">คะแนนประเมินตนเองโดยประมาณ (ระดับที่เป็นช่วงคิดจากค่าสูงสุด)</span></div>' +
+      '<b id="jumlah">' + jumlah(r) + " / " + r.markah + '</b><button type="button" id="kosong">Kosongkan · ล้าง</button></div>';
+    papar.setAttribute("data-i", i);
+    try { history.replaceState(null, "", "#" + r.id); } catch (x) {}
+  }
+
+  function jumlah(r) {
+    var s = skor[r.id] || {}, n = 0, ada = false;
+    r.kriteria.forEach(function (k, ki) { if (s[ki] !== undefined) { ada = true; n += k.tahap[s[ki]][1]; } });
+    return ada ? (Math.round(n * 10) / 10) : "–";
+  }
+
+  function tanda(sel) {
+    var i = +papar.getAttribute("data-i"), r = R[i];
+    var ki = +sel.getAttribute("data-k"), ti = +sel.getAttribute("data-t");
+    skor[r.id] = skor[r.id] || {};
+    if (skor[r.id][ki] === ti) delete skor[r.id][ki]; else skor[r.id][ki] = ti;
+    simpan.tulis(KUNCI, skor);
+    lukis(i);
+    var semula = papar.querySelector('[data-k="' + ki + '"][data-t="' + ti + '"]');
+    if (semula) semula.focus();
+  }
+
+  pilih.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) lukis(+b.getAttribute("data-i")); });
+  papar.addEventListener("click", function (e) {
+    var c = e.target.closest("td.pilihan"); if (c) { tanda(c); return; }
+    if (e.target.id === "kosong") { var r = R[+papar.getAttribute("data-i")]; delete skor[r.id]; simpan.tulis(KUNCI, skor); lukis(+papar.getAttribute("data-i")); tunjukToast("Dikosongkan · ล้างแล้ว"); }
+  });
+  papar.addEventListener("keydown", function (e) {
+    var c = e.target.closest("td.pilihan");
+    if (c && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); tanda(c); }
+  });
+
+  var h = location.hash.replace("#", "");
+  var awal = R.findIndex(function (r) { return r.id === h; });
+  lukis(awal >= 0 ? awal : 1);
+})();
+</script>
+</body>
+</html>
