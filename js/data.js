@@ -24,25 +24,25 @@ window.KURSUS = {
     { fail: "dokumen.html", ms: "Dokumen", th: "เอกสาร 15 บท" }
   ],
 
-  /* Pautan dokumen bab (Google Drive). Fail mesti dikongsi
+  /* Pautan dokumen bab (Google Drive, fail PDF dalam folder "Bab 1-15 Pdf"). Fail mesti dikongsi
      "Sesiapa yang mempunyai pautan boleh melihat" supaya pelajar dapat membukanya.
      ไฟล์ต้องตั้งค่าแชร์ "ทุกคนที่มีลิงก์ดูได้" นิสิตจึงจะเปิดได้ */
   bab: [
-    { no: 1,  id: "1GMvWNrF6GaiMP8Vm6y950pN6sw9H29oj", ms: "Pengenalan Kursus dan Konsep Seminar", th: "ปฐมนิเทศรายวิชาและแนวคิดการสัมมนา" },
-    { no: 2,  id: "1m4xq7d1V_v4W0Y7R1nYacFTr5dAuD87g", ms: "Prinsip dan Konsep Pengendalian Seminar", th: "หลักการและแนวคิดการจัดสัมมนา" },
-    { no: 3,  id: "1TwKnorETJ--zooMdSX4Hi4h1CDDJDo1z", ms: "Jenis, Bentuk dan Proses Seminar", th: "ประเภท รูปแบบ และกระบวนการสัมมนา" },
-    { no: 4,  id: "1PrwdQLlTmnbAz20OTLPrPQIFgVSs3por", ms: "Menganalisis Isu dan Menentukan Topik", th: "การวิเคราะห์ประเด็นและการกำหนดหัวข้อ" },
-    { no: 5,  id: "1bCZHyEXt8mIlgr3JK7VIgGr3xxv4Vs-B", ms: "Mencari Maklumat dan Membaca Kritis", th: "การค้นคว้าข้อมูลและการอ่านอย่างมีวิจารณญาณ" },
-    { no: 6,  id: "13pdGgQDulhHBtIrXd9kJNLgnJgnTme7z", ms: "Menulis Laporan Akademik dan APA", th: "การเขียนรายงานวิชาการและการอ้างอิง APA" },
-    { no: 7,  id: "18KZhdcmdE2woWB-9WECM_XrrLJ8Vve5C", ms: "Menyediakan Bahan Sokongan Seminar", th: "การจัดทำสื่อและเอกสารประกอบการสัมมนา" },
-    { no: 8,  id: "1JFU2WiOzj47zVjY90bYm6LXBLukTvD0k", ms: "Komunikasi dan Pembentangan Profesional", th: "การสื่อสารและการนำเสนออย่างมืออาชีพ" },
-    { no: 9,  id: "1XZOxF9ogKTnRzWzqhQSPAbM2BD-pej8U", ms: "Pengurusan Seminar dan Peranan Jawatankuasa", th: "การบริหารจัดการงานสัมมนาและบทบาททีมงาน" },
-    { no: 10, id: "1Q4uXR49_xQdHNNXI3CIQOHnaYp9HfpYs", ms: "Mini Seminar Pusingan 1", th: "สัมมนาในชั้นเรียน รอบที่ 1" },
-    { no: 11, id: "1kpY-qedANREkTLvM6w2xkh-DBVTQqWAn", ms: "Mini Seminar Pusingan 2", th: "สัมมนาในชั้นเรียน รอบที่ 2" },
-    { no: 12, id: "18AjuUAJXL2ktND0iYyOIqQnmZ0Ncc-6U", ms: "Analisis dan Refleksi Pasca Seminar", th: "การวิเคราะห์และสะท้อนคิดหลังสัมมนา" },
-    { no: 13, id: "1Ro_WpjxYJeF_GFAPnrgMK1xS5vy4uYoj", ms: "Menulis Laporan Akhir Seminar", th: "การเขียนรายงานสรุปผลสัมมนาฉบับสมบูรณ์" },
-    { no: 14, id: "1bLKHOOdhboiB8ScYbYeJgXzkK4xfohwP", ms: "Penilaian Kendiri dan Pembangunan Diri", th: "การประเมินและพัฒนาตนเอง" },
-    { no: 15, id: "17i43ymJE09wM_24n_lYV_ZmUMmjvGf_s", ms: "Academic Showcase dan Rumusan Kursus", th: "Academic Showcase และสรุปรายวิชา" }
+    { no: 1,  id: "1RaYcm8Hw18GZcQe_boli8Qa00yvMDrfE", ms: "Pengenalan Kursus dan Konsep Seminar", th: "ปฐมนิเทศรายวิชาและแนวคิดการสัมมนา" },
+    { no: 2,  id: "16Ds0__2JBmnEeRlr2f3hn2a4JUxHi0Y9", ms: "Prinsip dan Konsep Pengendalian Seminar", th: "หลักการและแนวคิดการจัดสัมมนา" },
+    { no: 3,  id: "1XccQt1JYVR8XPs5SoXhMh94YNAdImY5M", ms: "Jenis, Bentuk dan Proses Seminar", th: "ประเภท รูปแบบ และกระบวนการสัมมนา" },
+    { no: 4,  id: "1kX-XXCpajR_32l_5CtFP-7Fd5Ctg2TTB", ms: "Menganalisis Isu dan Menentukan Topik", th: "การวิเคราะห์ประเด็นและการกำหนดหัวข้อ" },
+    { no: 5,  id: "1FJaUoKs-TRLg10BW8_q_1eEWBazeLoRh", ms: "Mencari Maklumat dan Membaca Kritis", th: "การค้นคว้าข้อมูลและการอ่านอย่างมีวิจารณญาณ" },
+    { no: 6,  id: "1wc-6uc543iTnRUrEAtlNRA9CJUhw5mTB", ms: "Menulis Laporan Akademik dan APA", th: "การเขียนรายงานวิชาการและการอ้างอิง APA" },
+    { no: 7,  id: "1ZaLC7pooQ-uub1fkk-YEitJolj-2M_75", ms: "Menyediakan Bahan Sokongan Seminar", th: "การจัดทำสื่อและเอกสารประกอบการสัมมนา" },
+    { no: 8,  id: "1aBTrzoeLLRBTNuxqU_QxInqNWj4BNWt9", ms: "Komunikasi dan Pembentangan Profesional", th: "การสื่อสารและการนำเสนออย่างมืออาชีพ" },
+    { no: 9,  id: "1LudSHbk6-2rrmulfMm46E8NoR6qEaKwH", ms: "Pengurusan Seminar dan Peranan Jawatankuasa", th: "การบริหารจัดการงานสัมมนาและบทบาททีมงาน" },
+    { no: 10, id: "1N5wPjqMuEcc3Wzowd8msdOWaa-mCjaEs", ms: "Mini Seminar Pusingan 1", th: "สัมมนาในชั้นเรียน รอบที่ 1" },
+    { no: 11, id: "1JQpWD4xXTXttEYFLOdQWogu4xio75srQ", ms: "Mini Seminar Pusingan 2", th: "สัมมนาในชั้นเรียน รอบที่ 2" },
+    { no: 12, id: "17b4-XQ7pNETEx9pajMx4vvjo8d6iQomM", ms: "Analisis dan Refleksi Pasca Seminar", th: "การวิเคราะห์และสะท้อนคิดหลังสัมมนา" },
+    { no: 13, id: "1gLPAuFwNBPe-3ybe0DMbb7IjFUQ7U1mT", ms: "Menulis Laporan Akhir Seminar", th: "การเขียนรายงานสรุปผลสัมมนาฉบับสมบูรณ์" },
+    { no: 14, id: "1U2jNIIH17kgOmsel6jd2c6KTZJV4EbxB", ms: "Penilaian Kendiri dan Pembangunan Diri", th: "การประเมินและพัฒนาตนเอง" },
+    { no: 15, id: "1cA5CvZVLCjWLCWXI3yrXln3kE1LluS4t", ms: "Academic Showcase dan Rumusan Kursus", th: "Academic Showcase และสรุปรายวิชา" }
   ],
 
   /* Perjalanan 15 minggu. fasa: 1 Asas, 2 Kajian, 3 Persediaan, 4 Seminar, 5 Refleksi, 6 Showcase */
